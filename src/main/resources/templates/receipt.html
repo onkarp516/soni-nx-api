@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+     @media screen {
+         p {font-family:monospace;}
+      }
+        .title {
+        margin-top:0px;
+        padding:0px;
+            text-align: center;
+            font-size:50px;
+        }
+        .receipt-header {
+            width: 100%;
+        }
+        .receipt {
+            width: 100%;
+        }
+        .receipt, .receipt th, .receipt td {
+            border: 1px solid #25a7e7;
+            border-collapse: collapse;
+        }
+        .receipt th {
+            background-color: #25a7e7;
+            color: white;
+        }
+        .total {
+            text-align: right;
+        }
+        p{
+            margin:0px;
+            width:100%;
+            text-align:center;
+            font-size:50px;
+        }
+        .p1
+        {
+            margin:0px;
+            width:100%;
+            text-align:left;
+            font-size:50px;
+        }
+        table {
+        font-size:40px;
+          width: 100%;
+        }
+        body
+        {
+            height:auto;
+        }
+        td, th {
+          text-align: left;
+        }
+        .td-width{
+            width:50%;
+        }
+        .td-width1{
+            width:30%;
+        }
+    </style>
+</head>
+<body>
+<!--<h1>Receipt</h1>-->
+<p class=".title">UPAHAR CHIMICHANGA</p>
+<p>Solapur-413004</p>
+<p>Phone No :0</p>
+<p>KOT</p>
+<p>Table No : Table2</p>
+<hr/>
+<p class="p1">Bill No:000&nbsp;&nbsp;&nbsp; Date : 12-05-2022</p>
+    <table>
+        <tr>
+            <th>ITEM NAME</th>
+            <th>QNTY</th>
+            <th>NOTE</th>
+        </tr>
+        <tr>
+            <td th:text="${employee.fullName}" class="td-width"></td>
+            <td th:text="${employee.fullName}"></td>
+            <td th:text="${employee.fullName}" class="td-width1"></td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+        <tr>
+            <td class="td-width">Centro comercial Moctezuma</td>
+            <td>2</td>
+            <td class="td-width1">Not Spicy</td>
+        </tr>
+
+    </table>
+
+<!--    <table class="receipt-header">-->
+<!--        <tr>-->
+<!--                        <th>Bill To:</th>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td th:text="'Company Name: ' + ${employee.fullName}"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td th:text="'Address: ' + ${employee.address}"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td th:text="'Email: ' + ${employee.policeCaseDetails}"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td th:text="'Phone: ' + ${employee.disabilityDetails}"></td>-->
+<!--                    </tr>-->
+<!--&lt;!&ndash;            <td align="right">&ndash;&gt;-->
+<!--&lt;!&ndash;                <img width="140" src="https://simplesolution.dev/images/Logo_S_v1.png" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <br />&ndash;&gt;-->
+<!--&lt;!&ndash;                Simple Solution&ndash;&gt;-->
+<!--&lt;!&ndash;            </td>&ndash;&gt;-->
+<!--    </table>-->
+
+<br />
+<!--<table class="receipt">-->
+<!--    <tr>-->
+<!--        <th>Item #</th>-->
+<!--        <th>Description</th>-->
+<!--        <th>Quantity</th>-->
+<!--        <th>Unit Price</th>-->
+<!--        <th>Total</th>-->
+<!--    </tr>-->
+<!--    <tr th:each="item, iterStat: ${receiptItems}">-->
+<!--        <td th:text="${iterStat.index + 1}"></td>-->
+<!--        <td th:text="${item.description}"></td>-->
+<!--        <td th:text="${item.quantity}"></td>-->
+<!--        <td th:text="${item.unitPrice}"></td>-->
+<!--        <td th:text="${item.total}"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td class="total" colspan="4"><b>Total</b></td>-->
+<!--        <td><b th:text="${#aggregates.sum(receiptItems.![total])}"></b></td>-->
+<!--    </tr>-->
+<!--</table>-->
+</body>
+</html>
